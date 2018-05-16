@@ -1,0 +1,132 @@
+﻿@*
+    jQuery always goes inside document ready script
+    Tutorial from LearnCode.academy "jQuery Tutorial"
+*@
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Let's Have Fun!</h1>
+        <button class="panel-button" data-panelID="panel1" id="btn1">#btn1</button>
+        <button class="panel-button" data-panelID="panel2" id="btn2">#btn2</button>
+        <button class="panel-button" data-panelID="panel3" id="btn3">#btn3</button>
+        <button class="panel-button" data-panelID="panel4" id="btn4">#btn4</button>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-3">
+            <div id="panel1" class="panel panel-primary">
+                <div class="panel-heading">
+                    #panel1
+                </div>
+                <div class="panel-body">
+                    content
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-3">
+            <div id="panel2" class="panel panel-primary">
+                <div class="panel-heading">
+                    #panel2
+                </div>
+                <div class="panel-body">
+                    content
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-3">
+            <div id="panel3" class="panel panel-primary">
+                <div class="panel-heading">
+                    #panel3
+                </div>
+                <div class="panel-body">
+                    content
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-3">
+            <div id="panel4" class="panel panel-primary">
+                <div class="panel-heading">
+                    #panel4
+                </div>
+                <div class="panel-body">
+                    content
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style type="text/css">
+    form {
+        background-color: #D5EDEF;
+        color: #4f6b72;
+        width: 300px;
+        font-size: 12px;
+        padding: 12px;
+        border: 4px solid #C1DAD7;
+        font-family: 'Century Gothic';
+    }
+</style>
+
+<br />
+<form id="form1" runat="server">
+    
+    <asp:Panel ID="Panel1" runat="server">
+        Watch me grow!
+    </asp:Panel>
+</form>
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $("#Panel1").animate(
+            {
+                opacity: "0.5",
+                fontSize: "32px"
+            }, 1800);
+    });
+</script>
+<br />
+
+<script>
+    $(function () {
+        @*
+        $('#panel1').css({
+            color: "red",
+            fontWeight: "bold",
+        }).fadeToggle(1000).fadeToggle(1000);
+
+        $("#panel2").css({
+            opacity: ".5"
+        });
+
+
+        $("#btn1").on("mouseover", function () {
+            $("#panel1").slideToggle(200);
+        });
+        $("#btn2").on("click", function () {
+            $("#panel2 .panel-body").html("my new panel content");
+        });
+        $("#btn3").on("click", function () {
+            $("#panel3 .panel-body").slideToggle(200);
+        });
+        $("#btn4").on("click", function () {
+            $("#panel4").slideToggle(200);
+        });
+        *@
+
+        var content = "My New Awesome Content";
+
+        $(".panel-button").on("click", function () {
+            var panelID = $(this).attr("data-panelID");
+            $("#" + panelID + " .panel-body").toggle();
+            $("#" + panelID + " .panel-body").html(content);
+        });
+
+    });
+</script>

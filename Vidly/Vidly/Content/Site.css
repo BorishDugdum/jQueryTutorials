@@ -1,0 +1,110 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+@font-face {
+    font-family: 'PixAntiqua';
+    src: 
+        url('../fonts/PixAntiqua.ttf') format('truetype'),
+        url('../fonts/PixAntiqua.woff') format('woff'),
+        url('../fonts/PixAntiqua.svg#svgPixAntiqua') format('svg'), 
+        url('../fonts/PixAntiqua.eot?') format('embedded-opentype');
+}
+@font-face {
+    font-family: 'BOOTERFZ';
+    src: 
+        url('../fonts/BOOTERFZ.ttf') format('truetype'),
+        url('../fonts/BOOTERFZ.woff') format('woff'),
+        url('../fonts/BOOTERFZ.eot?') format('embedded-opentype'),
+        url('../fonts/BOOTERFZ.svg#svgBOOTERFZ') format('svg');
+}
+.button {
+    background-color: black;
+    color: white;
+    border: solid;
+    border-width: thick;
+    padding: 10px 16px 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: "PixAntiqua";
+    margin: 24px 24px 24px 24px;
+    cursor: pointer;
+}
+
+a:link {
+    color: #ff0000; 
+    transition: text-shadow 0.5s ease;
+    text-shadow: 
+        1px 1px 2px #000000, 
+        -1px -1px 2px #000000, 
+        -1px 1px 2px #000000, 
+        1px -1px 2px #000000
+}
+
+a:visited {
+    color: #ff0000; 
+    transition: text-shadow 0.5s ease;
+    text-shadow: 
+        1px 1px 2px #000000, 
+        -1px -1px 2px #000000, 
+        -1px 1px 2px #000000, 
+        1px -1px 2px #000000
+}
+
+a:hover {
+    color: #ff0000; 
+    text-decoration: none;
+    transition: text-shadow 0.5s ease;
+        text-shadow: 
+            1px 1px 2px #000000, 
+            -1px -1px 2px #000000, 
+            -1px 1px 2px #000000, 
+            1px -1px 2px #000000, 
+            1px 1px 2px #FFFFFF, 
+            -1px -1px 2px #FFFFFF, 
+            -1px 1px 2px #FFFFFF, 
+            1px -1px 2px #FFFFFF, 
+            1px 1px 2px #FFFFFF, 
+            -1px -1px 2px #FFFFFF, 
+            -1px 1px 2px #FFFFFF, 
+            1px -1px 2px #FFFFFF, 
+            2px 2px 1px #FFFFFF, 
+            -4px 4px 2px #FFFFFF, 
+            -6px 6px 3px #FFFFFF, 
+            -8px 8px 4px #FFFFFF, 
+            -10px 10px 5px #FFFFFF, 
+            -12px 12px 6px #FFFFFF, 
+            2px -2px 1px #FFFFFF, 
+            4px -4px 2px #FFFFFF, 
+            6px -6px 3px #FFFFFF, 
+            8px -8px 4px #FFFFFF, 
+            10px -10px 5px #FFFFFF, 
+            12px -12px 6px #FFFFFF, 
+            -3px 3px 3px #000000, 
+            3px -3px 3px #000000,
+            -5px 5px 5px #000000, 
+            5px -5px 5px #000000
+}
+
