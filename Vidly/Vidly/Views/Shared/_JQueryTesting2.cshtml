@@ -1,0 +1,38 @@
+﻿@*
+    DOM Traversal with jQuery    
+*@
+<style>
+    .special {
+        color: blue;
+    }
+</style>
+
+
+<ul class="list">
+    <li>one</li>
+    <li class="special">two</li>
+    <li>three</li>
+    <li>
+        <br />
+        <ul class="sublist">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </li>
+</ul>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LYKRkHSLE2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+
+<script>
+    $(function () {
+        $("li").on("click", function () {
+            $(this).parent().addClass("special");
+            if ( $(this).is(".special")) {
+                alert("special");
+            }
+        });
+    });
+</script>

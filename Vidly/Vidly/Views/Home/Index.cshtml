@@ -1,0 +1,31 @@
+﻿@{
+	ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+	<h1>Vidly Tutorial</h1>
+	<p class="lead">This site is something I created using the "free" portion of this video tutorial. I've made a few edits to it.</p>
+	<div style="text-align:center">
+		<p>Here's the embedded tutorial:</p>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/E7Voso411Vs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</div>
+
+</div>
+
+<div class="row">
+	<div class="col-md-4">
+		<h2>Customers Controller</h2>
+		<p>Here is the list of Customer objects that are currently hardcoded in.</p>
+		<p><a href='@Url.Action("Index", "Customers")' class="button">Go To Customers</a></p>
+	</div>
+	<div class="col-md-4">
+		<h2>Movies Controller</h2>
+		<p>Here is the list of Movie objects that are currently hardcoded in.</p>
+		<p><a href='@Url.Action("Index", "Movies")' class="button">Go To Movies</a></p>
+	</div>
+	<div class="col-md-4">
+		<h2>JQuery Testing</h2>
+		<p>Another tutorial series that goes over jQuery stuff. Currently set up in partial views.</p>
+		<p><a href='@Url.Action("JQuery", "Home")' class="button">Go To jQuery Testing</a></p>
+	</div>
+</div>
