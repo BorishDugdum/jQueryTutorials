@@ -1,6 +1,10 @@
 ﻿@*
     DOM Traversal with jQuery    
 *@
+<div class="header">
+    <h1 class="text-muted">jQuery DOM Traversal</h1>
+</div>
+
 <style>
     .special {
         color: blue;
@@ -22,17 +26,20 @@
     </li>
 </ul>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LYKRkHSLE2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div style="text-align:center">
+    <p>Here's the embedded tutorial:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/LYKRkHSLE2E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
-<script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
 
-<script>
-    $(function () {
-        $("li").on("click", function () {
-            $(this).parent().addClass("special");
-            if ( $(this).is(".special")) {
-                alert("special");
-            }
+    <script>
+        $(function () {
+            $("li").on("click", function () {
+                $(this).parent().addClass("special");
+                if ($(this).is(".special")) {
+                    alert("special");
+                }
+            });
         });
-    });
-</script>
+    </script>
